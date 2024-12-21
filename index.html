@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Color Guessing</title>
+</head>
+
+<body>
+    <div class="game-container">
+        <h1 class="main-heading">Color Guessing Game</h1>
+        <div class="game-intro">
+            <button class="difficulty-btn btn" onclick="startGame('easy')">Easy</button>
+            <button class="difficulty-btn btn" onclick="startGame('medium')">Medium</button>
+            <button class="difficulty-btn btn" onclick="startGame('hard')">Hard</button>
+        </div>
+
+        <div class="main-game">
+            <div class="scores">
+                <h6>
+                    <span>Points to achieve: </span>
+                    <span id="goal"></span>
+                </h6>
+                <h6>
+                    <span>Your score: </span>
+                    <span id="player-score"></span>
+                </h6>
+                <h6>
+                    <i class="fa-solid fa-heart fa-2xl" style="color: #ff0000;"></i>
+                    <span id="lives"></span>
+                </h6>
+            </div>
+            <div class="hint-container">
+                <button class="btn hint-btn" onclick="makeHint()">
+                    <i class="fa-solid fa-lightbulb" style="color: #ffc800;"></i>
+                    <span>Hint</span>
+                </button>
+                <p id="remaining-hints"></p>
+            </div>
+            <div id="color-to-guess"></div>
+            <div class="random-colors"></div>
+            <h5 id="status"></h5>
+            <button id="next-color" class="btn" onclick="randomizeBoard()">Next color</button>
+        </div>
+
+        <div class="after-game">
+            <h3 id="after-game-msg"></h3>
+            <div class="after-game-btns">
+                <button class="btn" onclick="playAgain()">Play Again</button>
+                <button class="btn" onclick="toMainMenu()">Main Menu</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

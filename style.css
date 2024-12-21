@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aquamarine;
+}
+
+.game-container {
+    width: 700px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 20px;
+    border: 1px solid #333;
+    background-color: white;
+    text-align: center;
+    position: relative;
+}
+
+.main-heading {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.game-intro {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.btn {
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #555;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #ccc;
+}
+
+.main-game {
+    padding-top: 60px;
+    position: relative;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.scores {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.scores h6 {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    justify-content: right;
+}
+
+.scores span {
+    font-size: 16px;
+}
+
+.hint-container {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+}
+
+.hint-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #f5f5f5;
+    padding: 8px 16px;
+}
+
+#remaining-hints {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    pointer-events: none;
+}
+
+#color-to-guess {
+    width: 180px;
+    height: 180px;
+    border-radius: 25px;
+    border: 2px solid #555;
+}
+
+.random-colors {
+    display: flex;
+    gap: 20px;
+}
+
+.random-color {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #555;
+    cursor: pointer;
+    transition: box-shadow 0.15s ease-in;
+}
+
+.random-color:hover {
+    box-shadow: 0px 0px 20px 1px #999;
+}
+
+#status {
+    height: 21px;
+    font-size: 18px;
+}
+
+.after-game {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#after-game-msg {
+    font-size: 20px;
+    color: white;
+    line-height: 150%;
+}
+
+.after-game-btns {
+    display: flex;
+    gap: 20px;
+}
