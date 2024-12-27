@@ -159,3 +159,19 @@ body {
     display: flex;
     gap: 20px;
 }
+
+.volume-btn {
+    width: 25px;
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    display: block;
+}
+
+.off {
+    opacity: 0.3;
+    display: none;
+}

@@ -17,6 +17,9 @@ const colorsContainer = document.querySelector(".random-colors");
 
 const nextClrBtn = document.getElementById("next-color");
 
+const muteBtn = document.querySelector(".volume-btn.on");
+const unmuteBtn = document.querySelector(".volume-btn.off");
+
 let randomColors;
 
 const difficulties = [
@@ -47,6 +50,8 @@ const difficulties = [
 ];
 
 let currDifficulty;
+let audio = new Audio();
+audio.volume = 0.2;
 
 /* Starts a game with a difficulty that user has chosen.
    Draws game board and randomizes colors for the first time */
@@ -87,9 +92,6 @@ const initializeBoard = () => {
 
 const checkColor = (e) => {
     let chosenColor = e.target.style.backgroundColor;
-
-    let audio = new Audio();
-    audio.volume = 0.2;
 
     if (chosenColor === colorToGuess.style.backgroundColor) {
         gameStatus.innerHTML = "Correct!"
@@ -249,4 +251,18 @@ const toMainMenu = () => {
 const resetBoard = () => {
     colorsContainer.innerHTML = "";
     afterGame.style.display = "none";
+}
+
+const mute = () => {
+    muteBtn.style.display = "none"
+    unmuteBtn.style.display = "block";
+
+    audio.volume = 0;
+}
+
+const unmute = () => {
+    muteBtn.style.display = "block"
+    unmuteBtn.style.display = "none";
+
+    audio.volume = 0.2;
 }
