@@ -179,7 +179,7 @@ body {
 @media screen and (max-width: 750px) {
     .game-container {
         width: 480px;
-        padding: 15px 15px 20px;
+        padding: 20px 15px 20px;
     }
     
     .main-heading {
@@ -194,11 +194,16 @@ body {
 @media screen and (max-width: 500px) {
     .game-container {
         width: 350px;
-        padding: 5px 5px 20px;
+        padding: 20px 5px 20px;
     }
 
     .main-heading {
         font-size: 22px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 6px;
     }
 
     #color-to-guess {
@@ -229,5 +234,13 @@ body {
 
     .scores span {
         font-size: 13px;
+    }
+
+    #after-game-msg {
+        font-size: 16px;
+    }
+
+    .volume-btn {
+        width: 18px;
     }
 }
