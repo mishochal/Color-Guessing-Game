@@ -175,3 +175,59 @@ body {
     opacity: 0.3;
     display: none;
 }
+
+@media screen and (max-width: 750px) {
+    .game-container {
+        width: 480px;
+        padding: 15px 15px 20px;
+    }
+    
+    .main-heading {
+        font-size: 28px;
+    }
+
+    .main-game {
+        padding-top: 100px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .game-container {
+        width: 350px;
+        padding: 5px 5px 20px;
+    }
+
+    .main-heading {
+        font-size: 22px;
+    }
+
+    #color-to-guess {
+        width: 140px;
+        height: 140px;
+    }
+
+    .random-colors {
+        gap: 15px;
+    }
+
+    .random-color {
+        width: 30px;
+        height: 30px;
+    }
+    .hint-container {
+        left: 20px;
+    }
+    
+    .hint-btn {
+        padding: 5px 10px;
+        gap: 6px;
+    }
+
+    .hint-btn span {
+        font-size: 13px;
+    }
+
+    .scores span {
+        font-size: 13px;
+    }
+}
